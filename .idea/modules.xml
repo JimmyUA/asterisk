@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/asterisk.iml" filepath="$PROJECT_DIR$/asterisk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/callslistener/callslistener.iml" filepath="$PROJECT_DIR$/callslistener/callslistener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hangupper/hangupper.iml" filepath="$PROJECT_DIR$/hangupper/hangupper.iml" />
       <module fileurl="file://$PROJECT_DIR$/managercallorigination/managercallorigination.iml" filepath="$PROJECT_DIR$/managercallorigination/managercallorigination.iml" />
+      <module fileurl="file://$PROJECT_DIR$/numbersholder/numbersholder.iml" filepath="$PROJECT_DIR$/numbersholder/numbersholder.iml" />
     </modules>
   </component>
 </project>

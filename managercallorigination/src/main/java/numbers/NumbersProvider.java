@@ -12,12 +12,31 @@ public class NumbersProvider {
     private File numbersSource;
     private List<String> numbers;
     private int counter;
+    private String lineSeparator = getLineSeparator();
+
+    public NumbersProvider() {
+        numbers = new ArrayList<>();
+    }
+
+    public List<String> getNumbers() {
+        return numbers;
+    }
+
+    private String getLineSeparator() {
+        String osName = System.getProperty("os.name");
+        LOGGER.info("OS: " + osName);
+        if (osName.contains("Windows")){
+            return "\r\n";
+        } else {
+            return "\r\n";
+        }
+    }
 
     private static final Logger LOGGER = Logger.getLogger(ClassName.getCurrentClassName());
 
     public void setNumbersSource(File numbersSource) {
         this.numbersSource = numbersSource;
-        numbers = new ArrayList<String>();
+        numbers = new ArrayList<>();
         fillNumbersList();
     }
 
@@ -30,8 +49,11 @@ public class NumbersProvider {
             LOGGER.error(e.getMessage());
             throw new RuntimeException(e);
         }
-        String[] numbersArray = numbersFile.split("\r\n");
+        String[] numbersArray = numbersFile.split(lineSeparator);
+       LOGGER.info( Arrays.deepToString(numbersArray));
         numbers.addAll(Arrays.asList(numbersArray));
+        LOGGER.info(numbers);
+
     }
 
     private String parseFile() throws IOException {
@@ -49,5 +71,9 @@ public class NumbersProvider {
             counter = 0;
         }
         return numbers.get(counter++);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(System.getProperty("os.name"));
     }
 }

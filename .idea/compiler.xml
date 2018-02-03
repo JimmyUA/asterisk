@@ -6,12 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="callslistener" />
+        <module name="hangupper" />
         <module name="managercallorigination" />
+        <module name="numbersholder" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="asterisk" target="1.5" />
-      <module name="managercallorigination" target="1.5" />
+      <module name="asterisk" target="1.6" />
+      <module name="callslistener" target="1.7" />
+      <module name="hangupper" target="1.7" />
+      <module name="managercallorigination" target="1.7" />
+      <module name="numbersholder" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

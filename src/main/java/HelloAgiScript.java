@@ -7,6 +7,7 @@ import org.asteriskjava.manager.action.OriginateAction;
 public class HelloAgiScript extends BaseAgiScript {
     public void service(AgiRequest agiRequest, AgiChannel agiChannel) throws AgiException {
         answer();
+        agiRequest.getCallerIdName();
         streamFile("welcome");
         hangup();
 
