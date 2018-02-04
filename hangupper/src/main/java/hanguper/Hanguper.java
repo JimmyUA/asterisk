@@ -27,10 +27,12 @@ public class Hanguper extends BaseAgiScript {
         LOGGER.info("got call ANI: " + ani + ", number : " + calledNumber);
 
         if (isConnectedCorrect(calledNumber, ani)) {
+                LOGGER.info(ani + " : " + calledNumber + " - connected");
             while (true) {
                 sayPhonetic("Rashacom");
             }
         } else {
+            LOGGER.info(ani + " : " + calledNumber + " - hungup");
             hangup();
         }
 
